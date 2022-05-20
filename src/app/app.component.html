@@ -1,11 +1,10 @@
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
-
   <div>
       <label for="name">
         Vārds
       </label>
       <input id="name" type="text" formControlName="name">
-    </div>
+  </div>
     <div>
     <label for="lastName">
       Uzvārds
@@ -13,11 +12,61 @@
     <input id="nalastNameme" type="text" formControlName="lastName">
   </div>
   <div>
-  <label for="companyName">
-    Uzņēmuma vārds
-  </label>
-  <input id="companyName" type="text" formControlName="ncompanyNameame">
-</div>
+    <label for="companyName">
+      Uzņēmuma vārds
+    </label>
+    <input id="companyName" type="text" formControlName="companyName">
+  </div>
+  <div>
+    <label for="regNr">
+      Uzņēmuma reģistrācijas numurs
+    </label>
+    <input id="regNr" type="text" formControlName="regNr">
+  </div>
+  <div>
+    <label for="email">
+      E-pasts
+    </label>
+    <input id="email" type="text" formControlName="email">
+  </div>
+  <div>
+    <label for="phone">
+      Telefona numurs
+    </label>
+    <input id="phone" type="text" formControlName="phone">
+  </div>
+  <div>
+    <label for="address">
+      Adrese
+    </label>
+    <input id="address" type="text" formControlName="address">
+  </div>
+  <div>
+    <label for="bank">
+      Banka
+    </label>
+    <input id="bank" type="text" formControlName="bank">
+  </div>
+  <div>
+    <label for="bankCode">
+      Bankas kods
+    </label>
+    <input id="bankCode" type="text" formControlName="bankCode">
+  </div>
+
+  <div>
+    <label for="accountNr">
+      Konta numurs
+    </label>
+    <input id="accountNr" type="text" formControlName="accountNr">
+  </div>
+  <div>
+    <label for="date">
+      Datums
+    </label>
+    <input id="date" type="text" formControlName="date">
+  </div>
+
   <button class="button" type="submit">Fill</button>
 
 </form>
