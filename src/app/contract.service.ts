@@ -30,7 +30,7 @@ export class ContractService {
       'Something bad happened; please try again later.');
   }
 
-  private postData(data: model){
+  public postData(data: model){
     this.httpClient.post<any>(this.REST_API_SERVER, data).subscribe(data => {
       console.log(data);
   });

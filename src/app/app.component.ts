@@ -9,6 +9,8 @@ import { ContractService } from './contract.service';
 })
 export class AppComponent implements OnInit {
 
+  obj:model = {} as model
+
   checkoutForm = this.formBuilder.group({
     name: '',
     lastName: '',
@@ -23,19 +25,19 @@ export class AppComponent implements OnInit {
     date: '',
   });
 
-  constructor(public service: ContractService, private formBuilder: FormBuilder, private postModel:model)  { 
+  constructor(public service: ContractService, private formBuilder: FormBuilder)  { 
 
   }
 
   ngOnInit(): void {}
   
   onSubmit(){
-    this.postModel.name = this.checkoutForm.value;
+    this.obj.name = this.checkoutForm.get['name'];
 
   }
 
-  postIban(ibanNr:string):void{
-    this.service.CheckIban(ibanNr);
+  postIban():void{
+    this.service.postData(this.obj);
   } 
 
 

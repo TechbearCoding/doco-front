@@ -1,11 +1,23 @@
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
 
   <div>
-      <label for="iban-nr">
-        Iban nr
+      <label for="name">
+        Vārds
       </label>
-      <input id="iban-nr" type="text" formControlName="ibanNr">
+      <input id="name" type="text" formControlName="name">
     </div>
-  <button class="button" type="submit">Verify</button>
+    <div>
+    <label for="lastName">
+      Uzvārds
+    </label>
+    <input id="nalastNameme" type="text" formControlName="lastName">
+  </div>
+  <div>
+  <label for="companyName">
+    Uzņēmuma vārds
+  </label>
+  <input id="companyName" type="text" formControlName="ncompanyNameame">
+</div>
+  <button class="button" type="submit">Fill</button>
 
 </form>
